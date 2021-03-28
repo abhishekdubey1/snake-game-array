@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.Board {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App:focus {
+  background-color: #282c34ec;
+}
+.board {
+  outline: 2px solid rgb(134, 154, 189);
+}
+.details-box {
+}
+.row {
+  height: 35px;
+}
+.cell {
+  width: 35px;
+  height: 35px;
+  outline: 1px solid rgb(134, 154, 189);
+  display: inline-block;
+}
+.cell-green {
+  background-color: green;
+}
+.cell-red {
+  background-color: red;
+}
+.cell-purple {
+  background-color: purple;
+}
+.btn-left {
+  position: absolute;
+  right: 30%;
+  bottom: 35vh;
+}
+.btn-right {
+  position: absolute;
+  right: 20%;
+  bottom: 35vh;
+}
+.btn-up {
+  position: absolute;
+  right: 25%;
+  bottom: 45vh;
+}
+.btn-down {
+  position: absolute;
+  right: 24.9%;
+  bottom: 25vh;
+}
+.checkbox {
+  visibility: hidden;
+}
+.label-checkbox {
+  user-select: none;
+  cursor: pointer;
+  /* border: solid 1px; */
+  /* padding: 0px 20px; */
+  width: 60px;
+  height: 60px;
+  margin-left: 30px;
+  display: inline-block;
+  overflow: hidden;
+  backface-visibility: hidden;
+  padding-bottom: 5px;
+}
+.delay {
+  visibility: hidden;
+}
+h1 {
+  display: flex;
+}
+.btn {
+  color: white;
+  background-color: black;
+  border: 2px solid;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-family: "Press Start 2P", cursive;
+}
+.cell-wall {
+  background-color: black;
+  /* border-right: 2px solid rgb(134, 154, 189); */
+  outline: 1px solid black;
+}
+.modal {
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  bottom: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  -webkit-tap-highlight-color: transparent;
+  top: 0;
+  z-index: 50;
+}
+.status {
+  font-family: "Press Start 2P", cursive;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+}
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 0px 13px;
+  height: max-content;
+  cursor: pointer;
+}
+.play-animate {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 13px;
+}
+@media only screen and (min-width: 1200px) {
+  .details-box {
+    position: absolute;
+    right: 14%;
+    top: 20%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .Board {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .Board {
+    justify-content: flex-start;
+  }
+
+  .row {
+    height: 15px;
+  }
+
+  .cell {
+    width: 15px;
+    height: 15px;
+  }
+
+  .btn-left {
+    position: absolute;
+    left: 5%;
+    bottom: 20%;
+  }
+  .btn-right {
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+  }
+  .btn-up {
+    position: absolute;
+    left: 47%;
+    bottom: 25%;
+  }
+  .btn-down {
+    position: absolute;
+    right: 45%;
+    bottom: 15%;
+  }
+  .checkbox {
+    visibility: hidden;
+  }
+  .label-checkbox {
+    user-select: none;
+    cursor: pointer;
+    border: solid 1px;
+    /* padding: 0px 20px; */
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+    display: inline-block;
+    overflow: hidden;
+    backface-visibility: hidden;
+    padding-bottom: 5px;
+    position: absolute;
+    bottom: 17%;
+    left: 15%;
+  }
+  .status {
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+  }
+  .board {
+    outline: 2px solid transparent;
+  }
+}
